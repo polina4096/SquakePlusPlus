@@ -326,7 +326,7 @@ public class QuakeClientPlayer {
     }
 
     private static void minecraft_SwingLimbsBasedOnMovement(PlayerEntity player) {
-        player.lastLimbDistance = player.limbDistance;
+//        player.lastLimbDistance = player.limbDistance;
         double d0 = player.getX() - prevX(player);
         double d1 = player.getZ() - prevZ(player);
         float f6 = MathHelper.sqrt((float) (d0 * d0 + d1 * d1)) * 4.0F;
@@ -335,8 +335,8 @@ public class QuakeClientPlayer {
             f6 = 1.0F;
         }
 
-        player.limbDistance += (f6 - player.limbDistance) * 0.4F;
-        player.limbAngle += player.limbDistance;
+//        player.limbDistance += (f6 - player.limbDistance) * 0.4F;
+//        player.limbAngle += player.limbDistance;
     }
 
     private static void minecraft_WaterMove(PlayerEntity player, float sidemove, float forwardmove) {
