@@ -10,6 +10,7 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
+    maven { url 'https://api.modrinth.com/maven' }
     maven { url 'https://masa.dy.fi/maven' }
     maven { url 'https://maven.terraformersmc.com/releases/' }
 }
@@ -26,6 +27,15 @@ dependencies {
     modImplementation "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}:${project.malilib_version}"
 
     modCompileOnly "com.terraformersmc:modmenu:${project.mod_menu_version}"
+
+    // I won't compromise on a good testing experience for myself
+    modRuntimeOnly "com.terraformersmc:modmenu:${project.mod_menu_version}"
+    modRuntimeOnly "maven.modrinth:lithium:mc1.19.4-0.11.1"
+    modRuntimeOnly "maven.modrinth:phosphor:mc1.19.x-0.8.1"
+    modRuntimeOnly "maven.modrinth:reeses-sodium-options:mc1.19.4-1.5.0"
+    modRuntimeOnly "maven.modrinth:sodium-extra:mc1.19.4-0.4.18"
+    modRuntimeOnly "maven.modrinth:sodium:mc1.19.4-0.4.10"
+
 }
 
 processResources {
